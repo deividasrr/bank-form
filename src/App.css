@@ -54,3 +54,7 @@ p {
 
 h1 {
 }
+
+.ant-layout {
+  background-color: inherit !important;
+}

@@ -2,6 +2,9 @@ import React from "react";
 import Intro from "./Intro";
 import Form from "./Form";
 import Summary from "./Summary";
+import { Layout, Menu, Breadcrumb } from "antd";
+
+const { Header, Content, Footer } = Layout;
 
 class Wrapper extends React.Component {
   constructor(props) {
@@ -27,7 +30,16 @@ class Wrapper extends React.Component {
       currentComponent = <Summary />;
     }
 
-    return <div className="wrapper">{currentComponent}</div>;
+    return (
+      <div className=" wrapper">
+        <Layout className=" wrapper">
+          <Content style={{ padding: "0 50px" }}>{currentComponent}</Content>
+          <Footer style={{ textAlign: "center" }}>
+            Ant Design ©2018 Created by Ant UED
+          </Footer>
+        </Layout>
+      </div>
+    );
   }
 }
 
