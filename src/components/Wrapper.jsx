@@ -2,7 +2,7 @@ import React from "react";
 import Intro from "./Intro";
 import Form from "./Form";
 import Summary from "./Summary";
-import { Layout, Menu, Breadcrumb } from "antd";
+import { Layout } from "antd";
 
 const { Header, Content, Footer } = Layout;
 
