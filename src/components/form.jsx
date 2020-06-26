@@ -1,20 +1,63 @@
 import React from "react";
-import { Steps, Button, message } from "antd";
+import { Steps, Button, message, Slider } from "antd";
 
 const { Step } = Steps;
 
 const steps = [
   {
-    title: "First",
-    content: "First-content",
+    title: "Pajamos",
+    content: (
+      <div>
+        <h1>Jūsų/šeimos grynosios mėnesio pajamos</h1>
+        <Slider defaultValue={0} />
+      </div>
+    ),
   },
   {
-    title: "Second",
-    content: "Second-content",
+    title: "Įmokos",
+    content: (
+      <div>
+        <h1>Jūsų/šeimos visų finansinių įsipareigojimų įmoka per mėn.</h1>
+        <Slider defaultValue={0} />
+      </div>
+    ),
   },
   {
-    title: "Last",
-    content: "Last-content",
+    title: "Suma",
+    content: (
+      <div>
+        <h1>Pageidaujama paskolos suma</h1>
+        <Slider defaultValue={0} />
+      </div>
+    ),
+  },
+  {
+    title: "Terminas",
+    content: (
+      <div>
+        <h1>Paskolos grąžinimo terminas</h1>
+        <Slider
+          // min={"1"}
+          // max={"5"}
+          // marks={{ 1: "1 metai", 5: "5 metai" }}
+          defaultValue={0}
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Santrauka",
+    content: (
+      <div>
+        <h1>Preliminarus pasiūlymas</h1>
+        <h2>
+          Mėn. įmoka: <span>100 Eur</span>
+        </h2>
+        <h2>
+          Didžiausia suma: <span>40 000 Eur</span>
+        </h2>
+      </div>
+    ),
   },
 ];
 
@@ -39,7 +82,7 @@ class Form extends React.Component {
   render() {
     const { current } = this.state;
     return (
-      <div>
+      <div className="form-wrapper">
         <Steps current={current}>
           {steps.map((item) => (
             <Step key={item.title} title={item.title} />
@@ -49,20 +92,20 @@ class Form extends React.Component {
         <div className="steps-action">
           {current < steps.length - 1 && (
             <Button type="primary" onClick={() => this.next()}>
-              Next
+              Sekantis
             </Button>
           )}
           {current === steps.length - 1 && (
             <Button
               type="primary"
-              onClick={() => message.success("Processing complete!")}
+              onClick={() => message.success("Paraiška išsiųsta")}
             >
-              Done
+              Siųsti paraišką
             </Button>
           )}
           {current > 0 && (
             <Button style={{ margin: "0 8px" }} onClick={() => this.prev()}>
-              Previous
+              Atgal
             </Button>
           )}
         </div>

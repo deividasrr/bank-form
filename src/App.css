@@ -1,17 +1,21 @@
-.wrapper {
-  background: linear-gradient(228deg, #c88686, #5960c3);
-  background-size: 400% 400%;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    background: darksalmon;
+    color: black;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
 
-  -webkit-animation: gradient-background 7s ease infinite;
-  -moz-animation: gradient-background 7s ease infinite;
-  animation: gradient-background 7s ease infinite;
-  height: 100vh;
-  color: white;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .wrapper p {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+  }
 }
 
 @-webkit-keyframes gradient-background {
@@ -53,8 +57,117 @@ p {
 }
 
 h1 {
+  font-weight: 900;
 }
 
 .ant-layout {
   background-color: inherit !important;
+}
+
+.wrapper .ant-layout-header {
+  width: 100%;
+  font-size: 3rem;
+  line-height: 4rem;
+  background-color: none;
+  background: none;
+  color: white;
+  margin-left: 10%;
+}
+
+.ant-layout-content .intro-wrapper {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  max-width: 1080px;
+}
+
+@media only screen and (min-width: 600px) {
+  .intro-body {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+  }
+
+  .ant-layout-content .intro-body {
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+  .wrapper {
+    /* background: linear-gradient(228deg, #c88686, #5960c3); */
+    background: linear-gradient(228deg, lightgrey, orangered);
+    background-size: 400% 400%;
+
+    -webkit-animation: gradient-background 7s ease infinite;
+    -moz-animation: gradient-background 7s ease infinite;
+    animation: gradient-background 7s ease infinite;
+    height: 100vh;
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.wrapper .ant-layout-footer {
+  color: white;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  padding: none;
+  background: inherit !important;
+}
+.ant-layout-footer a {
+  color: black;
+  font-weight: bold;
+}
+
+.wrapper h1,
+.wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  font-weight: 900;
+}
+
+.wrapper h1 {
+  font-size: 3rem;
+}
+
+.wrapper h2 {
+  font-size: 2rem;
+}
+
+.wrapper h2 span {
+  color: dodgerblue;
+}
+
+.wrapper button {
+  margin-top: 30px !important;
+  border-radius: 8px;
+  height: 60px;
+  font-size: 25px;
+  padding: 0px 30px;
+  float: right;
+  font-weight: bold;
+  color: black;
+}
+
+.form-wrapper {
+  margin-top: 150px;
+  width: 1080px;
+}
+
+.wrapper .ant-slider-handle {
+  width: 30px;
+  height: 30px;
+  margin-top: -12px;
+}
+
+.steps-content {
+  height: 250px;
 }

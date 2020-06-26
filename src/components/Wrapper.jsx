@@ -33,9 +33,21 @@ class Wrapper extends React.Component {
     return (
       <div className=" wrapper">
         <Layout className=" wrapper">
-          <Content style={{ padding: "0 50px" }}>{currentComponent}</Content>
-          <Footer style={{ textAlign: "center" }}>
-            Ant Design ©2018 Created by Ant UED
+          {/* <Header>MyBank</Header> */}
+
+          <Content>{currentComponent}</Content>
+          <Footer>
+            <div>
+              Created by{" "}
+              <a href="https://deividasrr.github.io/">Deividas Rutkauskas</a>
+              <br></br>
+              Source code at{" "}
+              <a href="https://github.com/deividasrr/bank-form">Github</a>
+              <br></br>
+              2020
+              <br></br>
+              <span>&#9996;</span>
+            </div>
           </Footer>
         </Layout>
       </div>
